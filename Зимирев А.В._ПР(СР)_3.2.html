@@ -1,0 +1,114 @@
+﻿<!DOCTYPE html>
+<html>
+ <head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+ 	<link rel="stylesheet" href="files/style.css" type="text/css">
+  <meta charset="utf-8">
+  <title>Учебная страница</title>
+ 
+ <body>
+ 
+  <h1>Это учебная страница</h1>
+  <p>Лекция</p>
+  <p>Практическое занятие</p>
+  <p><b>Практическое занятие</b></p>
+
+  <p><tt>Партия, товарищи, партия!</tt></p>
+
+<hr>
+<div>Я помню чудное мгновенье:</div>
+<div>Передо мной явилась ты,</div>
+<div>Как мимолетное виденье,</div>
+<div>Как гений чистой красоты.</div>
+<hr>
+<b onclick="$('div').show(1000);">Показать все строчки</b>
+<script>
+   $('div').click(function() {
+      $(this).hide(2000);
+   });
+</script>
+
+    
+ <hr>
+<form>
+<input type="button" value="Нажми на кнопку" onClick="alert('Ты молодец!')"></form>
+
+<button id="go">Скорее жми и эту кнопку</button>
+<div id="block">Купи слона!</div>
+ 
+<script>
+ 
+$( "#go" ).click(function() {
+  $( "#block" ).animate({
+    width: "70%",
+    opacity: 0.4,
+    marginLeft: "0.6in",
+    fontSize: "10em",
+    borderWidth: "10px"
+  }, 1500 );
+});
+
+
+</script>
+
+
+<form>
+<button><img src="http://a.kartinko.org/image_library/1/204677.gif" alt="">Кнопка с классным  рисунком</button>
+</form>
+
+
+<button id='button'>Поменять фон</button>
+
+<script>
+const button = document.getElementById('button');
+const rainbow = ['red', 'orange', 'yellow', 'green', 'blue', 'rebeccapurple', 'violet'];
+
+function changeBackground(){
+	document.body.style.background = rainbow[Math.floor(7 * Math.random())];
+	
+}
+
+button.addEventListener('click', changeBackground);
+
+</script>
+
+
+
+<table>
+
+<table border="2">
+
+<tr>
+<th>Графа 1 первая строчка</th>
+<th>Графа 2 первая строчка</th>
+</tr>
+<tr>
+<td>Графа 1 вторая строчка</td>
+<td>Графа 2 вторая строчка</td>
+</tr>
+<tr>
+<td>Графа 1 третья строчка</td>
+<td>Графа 2 третья строчка</td>
+</tr>
+<tr>
+<td>Графа 1 четвертая строчка</td>
+<td>Графа 2 четвертая строчка</td>
+</tr>
+<caption>Зимирев А.В. был тут</caption>
+</table>
+
+<script>
+var today = new Date();
+var dd = String(today.getDate()).padStart(2, '0');
+var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+var yyyy = today.getFullYear();
+
+today = dd + '/' + mm + '/' + yyyy;
+document.write(today);
+</script>
+
+
+
+</head>
+ </body>
+</html>
